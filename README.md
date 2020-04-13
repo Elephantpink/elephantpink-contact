@@ -45,7 +45,7 @@ You can use directly the components from the vendor folder, or if you need to cu
 
 This will create two separate "contact" folders under resources/js and resources/sass.
 
-Router import example:
+#### Router import example:
 
 ```
 import contactAdminRoutes from './contact/router'
@@ -59,7 +59,7 @@ const router = new VueRouter({
 })
 ```
 
-Store import example:
+#### Store import example:
 
 ```
 import Vue from 'vue'
@@ -76,7 +76,7 @@ const store = new Vuex.Store({
 })
 ```
 
-Translations import example:
+#### Translations import example:
 
 ```
 import Lang from 'lang.js';
