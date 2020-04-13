@@ -23,7 +23,7 @@
             "database/factories"
         ],
         "psr-4": {
-            "EPink\\Blog\\": "src/"
+            "EPink\\Contact\\": "src/"
         }
     },
     "autoload-dev": {
