@@ -1,12 +1,12 @@
 # elephantpink-contact
  
-# Install package
+## Install package
 
-`` composer require elephantpink/contact ``
+`` 
+ composer require elephantpink/contact 
+``
 
-<br/>
-
-# Database: migrations and seeders
+## Database: migrations and seeders
 
 ``
  php artisan vendor:publish --tag=epink-contact-migrations
@@ -16,19 +16,23 @@ After this, you'll find the migrations under the main database/migrations folder
 
 To run them, simply execute:
 
-`` php artisan migrate ``
+`` 
+ php artisan migrate
+``
 
 If you want sample data on the database, simply execute:
 
-`` php artisan db:seed --class=ContactSeeder ``
+``
+ php artisan db:seed --class=ContactSeeder
+``
 
-<br/>
-
-# Frontend
+## Frontend
 
 You can use directly the components from the vendor folder, or if you need to customize them, simply publish them to the resource folder:
 
-`` php artisan vendor:publish --tag=epink-contact-assets ``
+`` 
+ php artisan vendor:publish --tag=epink-contact-assets 
+``
 
 This will create two separate "contact" folders under resources/js and resources/sass.
 
@@ -36,4 +40,6 @@ In order to use these components you'll need to install the following node packa
 
 To do so, simply run:
 
-`` npm install vuex ... ``
+``
+ npm install vuex ...
+``
