@@ -14,13 +14,13 @@
 
 After this, you'll find the migrations under the main database/migrations folder.
 
-To run them, execute:
+To run them run:
 
 ```
  php artisan migrate
 ```
 
-If you want sample data on the database, simply execute:
+If you want sample data on the database run:
 
 ```
  php artisan db:seed --class=ContactSeeder
