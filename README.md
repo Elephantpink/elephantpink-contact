@@ -14,7 +14,7 @@
 
 After this, you'll find the migrations under the main database/migrations folder.
 
-To run them, simply execute:
+To run them, execute:
 
 `` 
  php artisan migrate
