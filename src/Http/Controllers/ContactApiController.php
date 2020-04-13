@@ -10,7 +10,7 @@ class ContactController extends Controller
 {
     public function __construct(Request $request)
     {
-        $this->middleware('auth:api')->except(['index', 'public']);
+        $this->middleware('auth:api')->except(['store']);
     }
 
     /**
