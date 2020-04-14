@@ -24,7 +24,12 @@ class StoreContact extends FormRequest
     public function rules()
     {
         return [
-            //
+            'name' => 'required|max:255',
+            'email' => 'required|max:255',
+            'phone' => 'nullable|max:25',
+            'subject' => 'nullable',
+            'message' => 'nullable',
+            'form' => 'required'
         ];
     }
 }
