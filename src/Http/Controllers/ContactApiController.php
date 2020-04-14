@@ -20,7 +20,15 @@ class ContactController extends Controller
      */
     public function index(Request $request)
     {
-        return response()->json(['contacts' => ContactsResource::collection(Contact::all())]);
+        try {
+
+            return response()->json([
+                'contacts' => ContactsResource::collection(Contact::all())
+            ], 200);
+
+        } catch (\Exception $e) {
+            return response()->json(['message' => 'Unexpected server error'], 500);
+        }
     }
 
     /**
@@ -29,27 +37,19 @@ class ContactController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreContact $request)
     {
-        $request->validate([
-            'name' => 'required|max:255',
-            'email' => 'required|max:255',
-            'phone' => 'nullable|max:25',
-            'subject' => 'nullable',
-            'message' => 'nullable',
-            'form' => 'required'
-        ]);
+        $validated = $request->validated();
 
-        $contact = Contact::create([
-            'name' => $request->name,
-            'email' => $request->email,
-            'phone' => $request->phone,
-            'subject' => $request->subject,
-            'message' => $request->message,
-            'form' => $request->form
-        ]);
+        try {
 
-        return response()->json(null, 204);
+            $contact = Contact::create($validated);
+    
+            return response()->json(null, 204);
+
+        } catch (\Exception $e) {
+            return response()->json(['message' => 'Unexpected server error'], 500);
+        }
     }
 
     /**
@@ -58,9 +58,17 @@ class ContactController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Contact $contact)
     {
-        //
+        try {
+            
+            return response()->json([
+                'contact' => new ContactResource($contact)
+            ], 200);
+
+        } catch (\Exception $e) {
+            return response()->json(['message' => 'Unexpected server error'], 500);
+        }
     }
 
     /**
@@ -70,9 +78,21 @@ class ContactController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(StoreContact $request, Contact $contact)
     {
-        //
+        $validated = $request->validated();
+
+        try {
+
+            $contact->update($validated);
+
+            return response()->json([
+                'contact' => $contact
+            ], 200);
+
+        } catch (\Exception $e) {
+            return response()->json(['message' => 'Unexpected server error'], 500);
+        }
     }
 
     /**
@@ -81,8 +101,16 @@ class ContactController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Contact $contact)
     {
-        //
+        try {
+
+            $contact->delete();
+
+            return response()->json(null, 204);
+
+        } catch (\Exception $e) {
+            return response()->json(['message' => 'Unexpected server error'], 500);
+        }
     }
 }
