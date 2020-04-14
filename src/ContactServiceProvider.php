@@ -28,7 +28,8 @@ class ContactServiceProvider extends ServiceProvider
 
       $this->publishes([
         __DIR__.'/../resources/js' => base_path('resources/js/contact'),
-        __DIR__.'/../resources/sass' => base_path('resources/sass/contact')
+        __DIR__.'/../resources/sass' => base_path('resources/sass/contact'),
+        __DIR__.'/../resources/svg' => base_path('resources/sass/svg')
       ], 'epink-contact-assets');
     }
 
