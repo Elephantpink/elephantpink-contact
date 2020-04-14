@@ -14,7 +14,7 @@
 
 After this, you'll find the migrations under the main database/migrations folder.
 
-To run them run:
+In order to create the required tables run:
 
 ```
  php artisan migrate
@@ -33,7 +33,7 @@ In order to use these components you'll need to install the following node packa
 To do so execute:
 
 ```
- npm install lang.js laravel-mix-svg-vue svg-vue vue vue-router vuex ...
+ npm install lang.js laravel-mix-svg-vue svg-vue vue vue-router vuex
 ```
 
 
@@ -52,7 +52,7 @@ import contactAdminRoutes from './contact/router'
 
 let routes = [other routes]
 
-routes = routes.concat(blogAdminRoutes, contactAdminRoutes, eventsAdminRoutes)
+routes = routes.concat(contactAdminRoutes [, other router files ])
 
 const router = new VueRouter({ 
   routes: routes 
@@ -85,4 +85,17 @@ import contactTranslations from './contact/translations'
 let lang = new Lang();
 let fullTranslations = Object.assign({}, contactTranslations [, other translation files ])
 lang.setMessages(fullTranslations)
+```
+
+#### Icons
+
+In order to use the svg-vue icons you should add the `laravel-mix-svg-vue` modify your webpack.mix.js file so it has the following content:
+
+```
+const mix = require('laravel-mix');
+require('laravel-mix-svg-vue');
+
+mix.js('resources/js/app.js', 'public/js')
+   .sass('resources/sass/app.scss', 'public/css')
+   .svgVue()
 ```
