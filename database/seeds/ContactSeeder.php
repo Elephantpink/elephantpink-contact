@@ -17,8 +17,7 @@ class ContactSeeder extends Seeder
             'email' => 'leonardo@davinci.com',
             'phone' => '600000001',
             'subject' => 'Information request',
-            'message' => 'Once you have tasted flight, you will forever walk the earth with your eyes 
-                turned skyward, for there you have been, and there you will always long to return.',
+            'message' => 'Once you have tasted flight, you will forever walk the earth with your eyes turned skyward, for there you have been, and there you will always long to return.',
             'form' => 'contact'
         ]);
 
@@ -27,8 +26,7 @@ class ContactSeeder extends Seeder
             'email' => 'michelangelo@buonarroti',
             'phone' => '600000002',
             'subject' => 'Contact',
-            'message' => 'The greater danger for most of us lies not in setting our aim too high and 
-                falling short; but in setting our aim too low, and achieving our mark.',
+            'message' => 'The greater danger for most of us lies not in setting our aim too high and falling short; but in setting our aim too low, and achieving our mark.',
             'form' => 'contact'
         ]);
 
@@ -37,8 +35,7 @@ class ContactSeeder extends Seeder
             'email' => 'miguel@decervantes',
             'phone' => '600000003',
             'subject' => 'Hello',
-            'message' => 'Finally, from so little sleeping and so much reading, his brain dried up 
-                and he went completely out of his mind.',
+            'message' => 'Finally, from so little sleeping and so much reading, his brain dried up and he went completely out of his mind.',
             'form' => 'contact'
         ]);
 
@@ -47,8 +44,7 @@ class ContactSeeder extends Seeder
             'email' => 'miguel@decervantes',
             'phone' => '600000004',
             'subject' => 'Contact request',
-            'message' => 'At the age of six I wanted to be a cook. At seven I wanted to be Napoleon. 
-                And my ambition has been growing steadily ever since.',
+            'message' => 'At the age of six I wanted to be a cook. At seven I wanted to be Napoleon. And my ambition has been growing steadily ever since.',
             'form' => 'contact'
         ]);
     }
