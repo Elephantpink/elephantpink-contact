@@ -4,6 +4,7 @@ namespace EPink\Contact\Http\Controllers;
 
 use Illuminate\Http\Request;
 use EPink\Contact\Models\Contact;
+use EPink\Contact\Http\Requests\StoreContact;
 use EPink\Contact\Http\Resources\ContactsResource;
 
 class ContactController extends Controller
