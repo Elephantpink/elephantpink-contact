@@ -14,6 +14,7 @@ class StoreContact extends FormRequest
     public function authorize()
     {
         return true;
+        
     }
 
     /**
