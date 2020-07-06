@@ -3,9 +3,11 @@
 namespace EPink\Contact\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 use EPink\Contact\Models\Contact;
 use EPink\Contact\Http\Requests\StoreContact;
 use EPink\Contact\Http\Resources\ContactsResource;
+use EPink\Contact\Mail\ContactNotification;
 
 class ContactController extends Controller
 {
@@ -45,6 +47,12 @@ class ContactController extends Controller
         try {
 
             $contact = Contact::create($validated);
+
+            $mailTo = config('app.contact_mail_notification', null);
+
+            if ($mailTo) {
+                Mail::to($mailTo)->send(new ContactNotification($validated));
+            }
     
             return response()->json(null, 204);
 
