@@ -31,6 +31,6 @@ class ContactNotification extends Mailable
     public function build()
     {
         return $this->subject('Contact notification')
-                    ->text('mails.contact', ['contact' => $this->contact]);
+                    ->view('mails.contact', ['contact' => $this->contact]);
     }
 }

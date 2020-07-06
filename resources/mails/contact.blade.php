@@ -604,12 +604,8 @@
                 <td style="padding:0px" class="mcnImageBlockInner" valign="top">
                     <table class="mcnImageContentContainer" style="min-width:100%;" width="100%" cellspacing="0" cellpadding="0" border="0" align="left">
                         <tbody><tr>
-                            <td class="mcnImageContent" style="padding-right: 0px; padding-left: 0px; padding-top: 0; padding-bottom: 0; text-align:center;" valign="top">
-                                
-                                    
-                                        <img alt="" src="https://mcusercontent.com/58eafcfe5d20e3920fe96f918/images/d96d4898-be00-471d-9f1f-44802dfd649e.png" style="max-width:3400px; padding-bottom: 0; display: inline !important; vertical-align: bottom;" class="mcnRetinaImage" width="600" align="middle">
-                                    
-                                
+                            <td class="mcnImageContent" style="padding-right: 0px; padding-left: 0px; padding-top: 0; padding-bottom: 0; text-align:center;" valign="top">    
+                                MY LOGO
                             </td>
                         </tr>
                     </tbody></table>
@@ -656,7 +652,7 @@
                         
                             <p style="font-weight:bold;line-height:24px;">Hola,</p>
 
-<p style="line-height:24px;color:#484848;">{{ $contact->name }} ha rellenado los datos del formulario de contacto. Accede al panel de administración para ver sus datos de contacto.</p>
+<p style="line-height:24px;color:#484848;">{{ $contact['name'] }} ha rellenado los datos del formulario de contacto. Accede al panel de administración para ver sus datos de contacto.</p>
 
                         </td>
                     </tr>
@@ -698,7 +694,7 @@
                     <tbody>
                         <tr>
                             <td class="mcnButtonContent" style="font-family: &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 12px; padding: 18px;" valign="middle" align="center">
-                                <a class="mcnButton " title="ACCESO PANEL" href="http://admin.fontanzubizarreta.com" target="_blank" style="font-weight: normal;letter-spacing: normal;line-height: 100%;text-align: center;text-decoration: none;color: #FFFFFF;">ACCESO PANEL</a>
+                                <a class="mcnButton " title="ACCESO PANEL" href="#" target="_blank" style="font-weight: normal;letter-spacing: normal;line-height: 100%;text-align: center;text-decoration: none;color: #FFFFFF;">ACCESO PANEL</a>
                             </td>
                         </tr>
                     </tbody>
