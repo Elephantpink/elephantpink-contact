@@ -48,7 +48,7 @@ class ContactController extends Controller
 
             $contact = Contact::create($validated);
 
-            $mailTo = config('app.contact_mail_notification', null);
+            $mailTo = config('mail.contact_mail_notification', null);
 
             if ($mailTo) {
                 Mail::to($mailTo)->send(new ContactNotification($validated));
